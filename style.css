@@ -1,0 +1,127 @@
+body {
+  font-family: sans-serif;
+  background: url(foto.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #000000;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background: rgba(243, 88, 88, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 17px;
+}
+.top span {
+  font-size: 15px;
+  margin-left: 10px;
+}
+.top i {
+  font-size: 18px;
+  margin-left: 20px;
+  border-radius: 30px;
+}
+.top i:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.top i:hover ~ p {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.top p {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.1s ease-in-out;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 30px 0px 40px;
+}
+.middle img {
+  width: 100px;
+  border-radius: 10px;
+}
+.middle .right {
+  margin: 20px 0px 10px 40px;
+}
+
+ul li {
+  list-style-type: circle;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: row;
+}
+.social-icon span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: 0px 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.social-icon span:hover {
+  color: #ffffff;
+  background: #000000;
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 0 15px #000000;
+}
+.social-icon i {
+  font-size: 20px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 10px 30px;
+}
+
+@media (max-width: 600px) {
+  .middle {
+    flex-direction: row;
+    padding: 10% 5%;
+  }
+  .middle .left {
+    width: 50%;
+  }
+  .middle .right {
+    width: 50%;
+  }
+  .middle img {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

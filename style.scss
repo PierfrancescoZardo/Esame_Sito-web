@@ -1,0 +1,162 @@
+// Variabili
+$color_1: #000000;
+$color_2: #ffffff;
+$font-family_1: sans-serif;
+
+// Stile generale del body
+body {
+    font-family: $font-family_1;
+    background: url(foto.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $color_1;
+}
+
+// Sezione principale
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+
+.card {
+    position: relative;
+    width: 500px;
+    backdrop-filter: blur(15px);
+    background: rgba(243, 88, 88, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+// Sezione superiore Card
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 17px;
+
+    // Stile per il nome
+    span {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    // Stile per l'icona
+    i {
+        font-size: 18px;
+        margin-left: 20px;
+        border-radius: 30px;
+
+        // Effetto sull'hover
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        // Effetto sull'hover testo
+        &:hover~p {
+            opacity: 1;
+            transition: .5s ease-in-out;
+        }
+    }
+    
+    // Stile testo accanto icona
+    p {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.20);
+        padding: 10px 20px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: .10s ease-in-out;
+    }
+}
+
+// Sezione centrale Card
+.middle {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 30px 0px 40px;
+    
+    // Stile immagini
+    img {
+        width: 100px;
+        border-radius: 10px;
+    }
+    
+    // Stile sezione a destra per informazioni
+    .right {
+        margin: 20px 0px 10px 40px;
+    }
+}
+
+// Elenco puntato
+ul {
+    li {
+        list-style-type: circle;
+    }
+}
+
+// Icone social
+.social-icon {
+    display: flex;
+    flex-direction: row;
+    
+    // Stile per icone
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        margin: 0px 5px;
+        transition: .4s;
+        cursor: pointer;
+        
+        // Effetto sull'hover
+        &:hover {
+            color: $color_2;
+            background: #000000;
+            transform: translateY(-4px);
+            box-shadow: inset 0 0 0 15px #000000;
+        }
+    }
+    // Stile testo icone
+    i {
+        font-size: 20px;
+    }
+}
+
+// Sezione inferiore Card
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 10px 30px;
+}
+
+@media (max-width: 600px) {
+    .middle {
+        flex-direction: row;
+        padding: 10% 5%;
+
+        .left {
+            width: 50%;
+        }
+
+        .right {
+            width: 50%;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+}
